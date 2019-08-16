@@ -1,0 +1,31 @@
+browser-->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+server-->browser: SPA HTML data
+browser-->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server-->browser: main.css
+browser-->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+
+note over browser
+browser executes JavaScript code from
+main.js that includes a request for JSON data
+end note
+
+browser-->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: data.json
+
+note over browser: 
+broswer executes code to display list
+end note
+
+note over browser:
+user enters note in input 
+field and clicks submit
+end note 
+
+note over browser:
+broswer executes JavaScript via the
+event handler being triggered and renders
+the new note on the page
+end note
+
+browser-->server: HTTP POST form value as JSON-String
+server-->browser: Status code 201
